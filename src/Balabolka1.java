@@ -23,8 +23,8 @@ public class Balabolka1
 
     static void scenarijus2() throws Exception
     {
-        String fileNumber = "53";
-        final String inFile = "D:\\DESKTOP_D\\John Locke\\lockelt\\21 Of Power\\"+fileNumber+"\\"+fileNumber+".txt";
+        String fileNumber = "54";
+        final String inFile = "D:\\lockelt\\21 Of Power\\"+fileNumber+"\\"+fileNumber+".txt";
 
         InputStream inputStream = new FileInputStream(inFile);
         Reader reader = new InputStreamReader(inputStream, Charset.forName("Unicode"));
@@ -53,11 +53,13 @@ public class Balabolka1
         f = new File(usbPath);
         f.mkdir();
 
-        lithuanian( lt ,usbPath, fileNumber, end1 );
+        lithuanian( lt ,usbPath, fileNumber, end1, "Regina", "Vladas" );
+//        lithuanian( lt ,usbPath, fileNumber, end1, "Aiste", "Edvardas" );
         english( en, usbPath, fileNumber, end2 );
     }
 
-    static void lithuanian( List<String> l, final String path, final String folder, final String end )
+    static void lithuanian( List<String> l, final String path, final String folder, final String end,
+                            final String titleVoice, final String bodyVoice )
     {
         int i = 1;
         StringBuilder sb = new StringBuilder();
@@ -69,11 +71,11 @@ public class Balabolka1
 
             if ( i == 1 )
             {
-                sb.append( "sound_Init( Regina );");
+                sb.append( "sound_Init( "+titleVoice+" );");
             }
             else if ( i == 2 )
             {
-                sb.append( "sound_Init( Vladas );");
+                sb.append( "sound_Init( "+bodyVoice+" );");
             }
 
             sb.append("sound_Save( \""+fileName+"\", \""+s+"\" );");
@@ -132,7 +134,15 @@ public class Balabolka1
                 lt.add( s );
         } // end while
         if ( en.size() != lt.size() )
+        {
+            for ( i = 0; i < en.size(); i++ )
+            {
+                System.out.println(en.get(i) + "*");
+                System.out.println(lt.get(i) + "*");
+                System.out.println();
+            }
             throw new RuntimeException("Masyvu ilgiai turi sutapti");
+        }
     }
 
 }
