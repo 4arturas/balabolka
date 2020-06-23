@@ -18,13 +18,16 @@ public class Balabolka1
     public static void main( String args[] ) throws Exception
     {
 //        scenarijus1();
-        scenarijus2();
+        scenarijus2("55", "Regina","Vladas", "Emma", "Brian");
+//        scenarijus2("55", "Aiste","Edvardas", "Salli", "Russel");
     }
 
-    static void scenarijus2() throws Exception
+    static void scenarijus2( final String folder, final String titleVoiceLithuania,
+                             final String bodyVoiceLithuatia, final String titleVoiceEnglish,
+                             final String bodyVoiceEnglish ) throws Exception
     {
-        String fileNumber = "54";
-        final String inFile = "D:\\lockelt\\21 Of Power\\"+fileNumber+"\\"+fileNumber+".txt";
+
+        final String inFile = "D:\\lockelt\\21 Of Power\\"+folder+"\\"+folder+".txt";
 
         InputStream inputStream = new FileInputStream(inFile);
         Reader reader = new InputStreamReader(inputStream, Charset.forName("Unicode"));
@@ -46,16 +49,16 @@ public class Balabolka1
 
 
 
-        final String usbPath = "D:/AAA/"+fileNumber+"/";
+        final String usbPath = "D:/AAA/"+folder+"/";
 //        final String usbPath = "G:/John Locke/en-lt21 Of Power/"+fileNumber+"/";
 
         java.io.File f;
         f = new File(usbPath);
         f.mkdir();
 
-        lithuanian( lt ,usbPath, fileNumber, end1, "Regina", "Vladas" );
+        lithuanian( lt ,usbPath, folder, end1, titleVoiceLithuania, bodyVoiceLithuatia );
 //        lithuanian( lt ,usbPath, fileNumber, end1, "Aiste", "Edvardas" );
-        english( en, usbPath, fileNumber, end2 );
+        english( en, usbPath, folder, end2, titleVoiceEnglish, bodyVoiceEnglish );
     }
 
     static void lithuanian( List<String> l, final String path, final String folder, final String end,
@@ -95,13 +98,14 @@ public class Balabolka1
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(stringSelection, null);
     }
-    static void english( List<String> l, final String path, final String folder, final String end )
+    static void english( List<String> l, final String path, final String folder, final String end,
+                         final String titleVoice, final String bobyVoice )
     {
         int i = 1;
         String b = "D:\\Balabolka\\balcon.exe -w %s -n \"%s\" -s -4 -v 100 --silence-begin 1000 --silence-end 500 -t \"%s\"";
         for ( String s : l )
         {
-            String voice = (i==1)?"Emma":"Brian";
+            String voice = (i==1)?titleVoice:bobyVoice;
 
             String fileName = "" + (i++);
             if ( fileName.length() == 1 ) fileName = "0" + fileName;

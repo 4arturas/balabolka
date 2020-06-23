@@ -14,12 +14,14 @@ public class BalabolkaRU
     public static void main( String args[] ) throws Exception
     {
 //        scenarijus1();
-        scenarijus2();
+        scenarijus2("51ru", "Tatyana","Maxim" );
+//        scenarijus2("51ru_", "Katya","Yuri" );
     }
 
-    static void scenarijus2() throws Exception
+
+
+    static void scenarijus2( final String folder, final String titleVoice, final String bodyVoice ) throws Exception
     {
-        String fileNumber = "51ru";
         final String inFile = "D:\\AAA\\txt.log";
 
         InputStream inputStream = new FileInputStream(inFile);
@@ -41,18 +43,19 @@ public class BalabolkaRU
 
 
 
-        final String usbPath = "D:/AAA/"+fileNumber+"/";
+        final String usbPath = "D:/AAA/"+folder+"/";
 //        final String usbPath = "G:/John Locke/en-lt21 Of Power/"+fileNumber+"/";
 
         File f;
         f = new File(usbPath);
         f.mkdir();
 
-        russian( ru, usbPath, fileNumber, end2 );
+        russian( ru, usbPath, folder, end2, titleVoice, bodyVoice );
     }
 
 
-    static void russian(List<String> l, final String path, final String folder, final String end )
+    static void russian(List<String> l, final String path, final String folder, final String end,
+                        final String titleVoice, final String bodyVoice )
     {
         int i = 1;
         String b = "D:\\Balabolka\\balcon.exe -w %s -n \"%s\" -s -4 -v 100 --silence-begin 1000 --silence-end 500 -t \"%s\"";
@@ -60,9 +63,9 @@ public class BalabolkaRU
         {
             String voice;
             if (i==1||i==2)
-                voice = "Tatyana";
+                voice = titleVoice;
             else
-                voice = "Maxim";
+                voice = bodyVoice;
 
             String fileName = "" + (i++);
             if ( fileName.length() == 1 ) fileName = "0" + fileName;
