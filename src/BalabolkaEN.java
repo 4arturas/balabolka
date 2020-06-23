@@ -19,7 +19,7 @@ public class BalabolkaEN
 
     static void scenarijus2() throws Exception
     {
-        String fileNumber = "54_en";
+        String fileNumber = "55en";
         final String inFile = "D:\\AAA\\txt.log";
 
         InputStream inputStream = new FileInputStream(inFile);
