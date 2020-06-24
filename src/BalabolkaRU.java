@@ -14,8 +14,8 @@ public class BalabolkaRU
     public static void main( String args[] ) throws Exception
     {
 //        scenarijus1();
-        scenarijus2("51ru", "Tatyana","Maxim" );
-//        scenarijus2("51ru_", "Katya","Yuri" );
+        scenarijus2("56ru", "Tatyana","Maxim" );
+        scenarijus2("56ru_", "Katya","Yuri" );
     }
 
 

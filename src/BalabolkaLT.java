@@ -6,17 +6,29 @@ import java.util.StringTokenizer;
 
 public class BalabolkaLT
 {
-    static String txt = "54. Kaip gaunasi, kad žmonės eina skirtingais keliais?\n" +
+    static String txt = "56. Visi žmonės ieško laimės, bet ne tos pačios.\n" +
             "\n" +
-            "Iš to kas pasakyta aukščiau lengva paaiškinti, kokiu būdu, neatsižvelgiant į visų žmonių siekį į laimę, jų valia veda juos priešingomis kryptimis ir, reiškia, kai kuriuos iš jų į blogį.\n" +
+            "Protas turi skirtingus polinkius, taip pat kaip ir gomurys.\n" +
             "\n" +
-            "Į tai aš atsakau, kad skirtumai ir tiesioginė priešingybė renkantis tarp vieno ir kito, kurį žmonės daro šiame pasaulyje, įrodo ne tai, kad ne visi jie ieško gėrio, o tik tai, kad ne visiems vienodai tas ar kitas daiktas būna geras.\n" +
+            "Bandymas patenkinti visus žmones turtais arba garbe(kurią kai kurie žmonės priskiria sava laime) pasirodys tokia pat tuščia, kaip ir bandymas patenkinti jų alki sūriu arba omarais.\n" +
             "\n" +
-            "Ši paieškų įvairovę parodo, kad ne visi priskiria savo laimę vienam ir tam pačiam ir pasirenka vieną ir tą patį kelią į laimę.\n" +
+            "Nors kai kuriems šie patiekalai atrodo maloniais ir nuostabiais, kitiems jie sukelia smarkų pasišlykštėjimą; dauguma ne be pagrindo pasitenkintų spazmais alkaname skrandyje, kurie kitiems atrodo didžiausias pasitenkinimas.\n" +
             "\n" +
-            "Jei visi žmogaus interesai apsiribotų tik šiuo gyvenimu, tai to priežastis, kad vienas pasirenka mokslus, o kitas - medžioklę šunimis, vienas - prabangą ir pasileidimą, o kitas - blaivumą.\n" +
+            "Tame ir randasi priežastis, kodėl senovės filosofų tyrimai buvo atlikti veltui, ar didžiausias gėris yra turte, ar kūniškuose malonumuose, ar dorybėje, ar mąstyme.\n" +
             "\n" +
-            "Turtai, būtų ne tai, kad niekas iš jų ne siekia savos laimės, o tai, kad jų laimė randasi skirtinguose daiktuose. Todėl teisingas buvo daktaro atsakymas savam pacientui, kuriam skaudėjo akis: \"Jei jums labai patinka vyno skonis, nei naudotis savo regėjimu, vynas jums - gėris; jeigu jums rega sukelia daugiau malonumo, nei malonumas nuo gėrimo, vynas jums - blogis\".\n";
+            "Su tokia pat teise jie galėtų ginčytis ir skirstytis į mokyklas pagal klausimus apie tai, kas iš visų skaniausi: obuoliai, slyvos arba riešutai.\n" +
+            "\n" +
+            "Nes, ne nuo daiktų priklauso koks malonus yra skonis, o nuo to ar kito gomurio patrauklumo, tame galime stebėti didelę įvairovę, taip ir aukščiausia laimė yra daiktų, suteikiančių didžiausią malonumą turėjime, ir daiktų, sukeliančių  kažkokį nepasitenkinimą neturėjime, kažkokią kančia.\n" +
+            "\n" +
+            "O skirtingiems žmonėms jie skirtingi.\n" +
+            "\n" +
+            "Jeigu todėl žmonės dėtų viltis tik į šį gyvenimą, jeigu jie galėtų mėgautis tik jame, tai ne būtų nieko keisto ir neprotingo tame, kad jie ieškotų savos laimės tame, kad išvengti viso to, kas sukelia jiems čia skausmą, ir siekyje link viso to, kas tenkina juos, ir nėra nieko nuostabaus, kad mes randame čia įvairovę ir skirtumą.\n" +
+            "\n" +
+            "Jeigu už kapo nieko nesimato, tada, aišku, teisinga išvada: \"ar valgysime ir gersime\", mėgausime tuo, kas mums malonu, \"nes rytoj numirsime\".\n" +
+            "\n" +
+            "Man atrodo, tai gali išaiškinti mums, kodėl ne visi skatinami vienu ir tuo pačiu objektu, nors visų norai nukreipti į laimę.\n" +
+            "\n" +
+            "Žmonės gali pasirinkti skirtingus daiktus ir vis gi pasirinkti teisingai, jeigu tik tarti, kad jie panašūs į apgailėtinų vabzdžių visuomenę, vieni iš kurių - bitės mėgaujasi gėlėmis ir jų saldumu, kiti - vabalai mėgaujasi kitu maistu, o pasitenkinę tuo tam tikrą laiko tarpą, visi jie nustoja būti ir nuo tada daugiau niekada neegzistuoja.\n";
     public static void main( String args[] )
     {
 
