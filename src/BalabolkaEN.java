@@ -14,8 +14,8 @@ public class BalabolkaEN
     public static void main( String args[] ) throws Exception
     {
 //        scenarijus1();
-        scenarijus2( "56en", "Emma", "Brian" );
-        scenarijus2( "56en_", "Salli", "Russel" );
+        scenarijus2( "59en", "Emma", "Brian" );
+        scenarijus2( "59en_", "Salli", "Russel" );
     }
 
     static void scenarijus2( final String folder, final String titleVoice, final String bodyVoice ) throws Exception
