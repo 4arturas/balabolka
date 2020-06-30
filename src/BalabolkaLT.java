@@ -11,7 +11,7 @@ public class BalabolkaLT
     {
 
         StringBuilder sb = new StringBuilder();
-        final String folder = "59";
+        final String folder = "60";
         make( sb,"D:/AAA/"+folder+"lt/", "Regina", "Vladas" );
         make( sb,"D:/AAA/"+folder+"lt_/", "Aiste", "Edvardas" );
 

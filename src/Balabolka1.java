@@ -18,8 +18,8 @@ public class Balabolka1
     public static void main( String args[] ) throws Exception
     {
 //        scenarijus1();
-        scenarijus2("59", "Regina","Vladas", "Emma", "Brian");
-//        scenarijus2("59", "Aiste","Edvardas", "Salli", "Russel");
+        scenarijus2("60", "Regina","Vladas", "Emma", "Brian");
+//        scenarijus2("60", "Aiste","Edvardas", "Salli", "Russel");
     }
 
     static void scenarijus2( final String folder, final String titleVoiceLithuania,
