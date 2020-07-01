@@ -16,6 +16,9 @@ public class BalabolkaCommon
         Balabolka1.scenarijus2(sb, sourceFolder, "Regina","Vladas", "Emma", "Brian");
         Balabolka1.scenarijus2(sb, sourceFolder+"_", "Aiste","Edvardas", "Salli", "Russel");
 
+        BalabolkaLT.make( sb,sourcePath, sourceFolder,destinationPath+sourceFolder+"lt/", "Regina", "Vladas" );
+        BalabolkaLT.make( sb,sourcePath, sourceFolder,destinationPath+sourceFolder+"lt_/", "Aiste", "Edvardas" );
+
 
         BalabolkaEN.scenarijus2( destinationPath, sourcePath, sourceFolder,sourceFolder+"en", "Emma", "Brian" );
         BalabolkaEN.scenarijus2( destinationPath, sourcePath, sourceFolder, sourceFolder+"en_", "Salli", "Russel" );
