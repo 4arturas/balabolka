@@ -17,27 +17,36 @@ public class Balabolka1
 
     public static void main( String args[] ) throws Exception
     {
+        StringBuilder sb = new StringBuilder();
 //        scenarijus1();
-        scenarijus2("60", "Regina","Vladas", "Emma", "Brian");
-//        scenarijus2("60", "Aiste","Edvardas", "Salli", "Russel");
+        String folder = "61";
+        scenarijus2(sb, folder, "Regina","Vladas", "Emma", "Brian");
+        scenarijus2(sb, folder+"_", "Aiste","Edvardas", "Salli", "Russel");
+
+        System.out.println( sb );
+
+        StringSelection stringSelection = new StringSelection(sb.toString());
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(stringSelection, null);
     }
 
-    static void scenarijus2( final String folder, final String titleVoiceLithuania,
+    public static void scenarijus2( StringBuilder sb, final String folder, final String titleVoiceLithuania,
                              final String bodyVoiceLithuatia, final String titleVoiceEnglish,
                              final String bodyVoiceEnglish ) throws Exception
     {
 
-        final String inFile = "D:\\lockelt\\21 Of Power\\"+folder+"\\"+folder+".txt";
+        final String inFile = "D:\\lockelt\\21 Of Power\\"+folder.replaceAll("_", "")+"\\"+folder.replaceAll("_", "")+
+                ".txt";
 
         InputStream inputStream = new FileInputStream(inFile);
         Reader reader = new InputStreamReader(inputStream, Charset.forName("Unicode"));
         BufferedReader br = new BufferedReader( reader );
-        StringBuffer sb = new StringBuffer();
+        StringBuffer sbInner = new StringBuffer();
         String s;
         while ( (s = br.readLine() ) != null)
         {
-            sb.append( s );
-            sb.append( "\n" );
+            sbInner.append( s );
+            sbInner.append( "\n" );
 
         }
         br.close();
@@ -45,7 +54,7 @@ public class Balabolka1
 
         List<String> en = new LinkedList<String>();
         List<String> lt = new LinkedList<String>();
-        split_Text( sb.toString(), en, lt );
+        split_Text( sbInner.toString(), en, lt );
 
 
 
@@ -56,16 +65,16 @@ public class Balabolka1
         f = new File(usbPath);
         f.mkdir();
 
-        lithuanian( lt ,usbPath, folder, end1, titleVoiceLithuania, bodyVoiceLithuatia );
+        lithuanian( sb, lt ,usbPath, folder, end1, titleVoiceLithuania, bodyVoiceLithuatia );
 //        lithuanian( lt ,usbPath, fileNumber, end1, "Aiste", "Edvardas" );
         english( en, usbPath, folder, end2, titleVoiceEnglish, bodyVoiceEnglish );
     }
 
-    static void lithuanian( List<String> l, final String path, final String folder, final String end,
+    static void lithuanian( StringBuilder sb, List<String> l, final String path, final String folder, final String end,
                             final String titleVoice, final String bodyVoice )
     {
         int i = 1;
-        StringBuilder sb = new StringBuilder();
+
         for ( String s : l )
         {
             String fileName = "" + i;
@@ -92,11 +101,6 @@ public class Balabolka1
         } // end for s
         sb.append("sound_Destroy();");
 
-        System.out.println( sb );
-
-        StringSelection stringSelection = new StringSelection(sb.toString());
-        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-        clipboard.setContents(stringSelection, null);
     }
     static void english( List<String> l, final String path, final String folder, final String end,
                          final String titleVoice, final String bobyVoice )

@@ -14,15 +14,24 @@ public class BalabolkaRU
     public static void main( String args[] ) throws Exception
     {
 //        scenarijus1();
-        scenarijus2("60ru", "Tatyana","Maxim" );
-        scenarijus2("60ru_", "Katya","Yuri" );
+//        scenarijus2("60ru", "Tatyana","Maxim" );
+//        scenarijus2("60ru_", "Katya","Yuri" );
+
+        final String destinationPath = "D:/AAA/";
+        final String path = "D:\\lockelt\\21 Of Power\\";
+        final String folder = "61";
+        scenarijus2( destinationPath, path, folder,folder+"ru", "Tatyana", "Maxim" );
+        scenarijus2( destinationPath, path, folder, folder+"ru_", "Katya", "Yuri" );
     }
 
 
 
-    static void scenarijus2( final String folder, final String titleVoice, final String bodyVoice ) throws Exception
+    public static void scenarijus2( final String destinationPath, final String sourcePath, final String sourceFolder,
+                                    final String folderName, final String titleVoice,
+                                    final String bodyVoice ) throws Exception
     {
-        final String inFile = "D:\\AAA\\txt.log";
+//        final String inFile = "D:\\AAA\\txt.log";
+        final String inFile = sourcePath + sourceFolder + "\\"+sourceFolder+"_ru.txt";
 
         InputStream inputStream = new FileInputStream(inFile);
         Reader reader = new InputStreamReader(inputStream, Charset.forName("utf-8"));
@@ -43,14 +52,14 @@ public class BalabolkaRU
 
 
 
-        final String usbPath = "D:/AAA/"+folder+"/";
+        final String usbPath = destinationPath+folderName+"/";
 //        final String usbPath = "G:/John Locke/en-lt21 Of Power/"+fileNumber+"/";
 
         File f;
         f = new File(usbPath);
         f.mkdir();
 
-        russian( ru, usbPath, folder, end2, titleVoice, bodyVoice );
+        russian( ru, usbPath, folderName, end2, titleVoice, bodyVoice );
     }
 
 
