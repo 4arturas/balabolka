@@ -39,7 +39,7 @@ public class Balabolka1
                 ".txt";
 
         InputStream inputStream = new FileInputStream(inFile);
-        Reader reader = new InputStreamReader(inputStream, Charset.forName("Unicode"));
+        Reader reader = new InputStreamReader(inputStream, Charset.forName("utf-8"));
         BufferedReader br = new BufferedReader( reader );
         StringBuffer sbInner = new StringBuffer();
         String s;
