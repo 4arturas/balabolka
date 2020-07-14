@@ -145,8 +145,8 @@ public class Balabolka1
         {
             for ( i = 0; i < en.size(); i++ )
             {
-                System.out.println(en.get(i) + "*");
-                System.out.println(lt.get(i) + "*");
+                System.out.println("*"+en.get(i) + "*");
+                System.out.println("*"+lt.get(i) + "*");
                 System.out.println();
             }
             throw new RuntimeException("Masyvu ilgiai turi sutapti");
