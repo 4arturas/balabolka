@@ -9,7 +9,7 @@ public class BalabolkaCommon
 
         final String destinationPath = "D:/AAA/";
         final String sourcePath = "D:\\lockelt\\21 Of Power\\";
-        final String sourceFolder = "67";
+        final String sourceFolder = "70";
 
         StringBuilder sb = new StringBuilder();
 
